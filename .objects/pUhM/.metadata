@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome CRM",
+  "Type": "App",
+  "Id": "pUhMNOtnPEikC1GmU4Dh_w",
+  "Reference": "wO9kpzPyiUqWrd2hfvwZVg/pUhMNOtnPEikC1GmU4Dh_w",
+  "Created": "2026-04-15T15:28:52.4672253Z",
+  "Updated": "2026-04-15T15:28:52.4672253Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -165,7 +165,7 @@
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DesktopDataCapturing - Invoke Workflow File (DesktopDataCapturing.xaml)" sap:VirtualizedContainerService.HintSize="374,145.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DesktopDataCapturing.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="In_CustomerData">[dt_CustomerData]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Parallel>
