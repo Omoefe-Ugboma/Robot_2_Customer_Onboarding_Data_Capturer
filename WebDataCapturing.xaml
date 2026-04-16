@@ -115,9 +115,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting Web Data Capturing&quot;]" />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="524,128" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Ensure you're signed into https://www.theautomationchallenge.com/crm and are not using an incognito browser" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome CRM" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,3611.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="fe274566-5dc7-488a-b1d2-37d3c9e2f076" UserDataFolderMode="[UiPath.UIAutomationNext.Enums.BrowserUserDataFolderMode.DefaultFolder]" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Workflow Starting" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting Web Data Capturing&quot;]" />
+    <ui:Comment DisplayName="IMportant Sign IN" sap:VirtualizedContainerService.HintSize="524,128" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Ensure you're signed into https://www.theautomationchallenge.com/crm and are not using an incognito browser" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Attach to Chrome and navigate to CRM" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,3611.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="fe274566-5dc7-488a-b1d2-37d3c9e2f076" UserDataFolderMode="[UiPath.UIAutomationNext.Enums.BrowserUserDataFolderMode.DefaultFolder]" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -129,7 +129,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_CustomerData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,3356.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_CustomerData]" DisplayName="For Each Customer in dt_CustomerData" sap:VirtualizedContainerService.HintSize="488,3356.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>

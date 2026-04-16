@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DesktopDataCapturing" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DesktopDataCapturing" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_CustomerData" Type="InArgument(sd:DataTable)" />
   </x:Members>
@@ -37,6 +37,14 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -89,6 +97,14 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -96,12 +112,59 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="DesktopDataCapturing" sap:VirtualizedContainerService.HintSize="704.6666666666666,258.32333333333327" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DesktopDataCapturing" sap:VirtualizedContainerService.HintSize="639.3333333333333,856" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting Desktop Data Capturing&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting Desktop Data Capturing&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="The Automation Challenge  CRM App" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,656.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="5c0b87a2-7600-4078-a0fb-3ee3623c1d94" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,409.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[In_CustomerData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,349.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Capturing to desktop CRM: &quot;+CurrentRow(&quot;first name&quot;).ToString+&quot; &quot;+CurrentRow(&quot;last name&quot;).ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="294, 24, 1524, 989" ContentHash="5tjIO9OHLkmehz1d1RHp7A" FilePath="C:\Users\HP\Documents\UiPath Project Portfolio\Robot 2 Customer Onboarding Data Capturer\crm_desktop_app.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPcSURBVFhHzZV/TJR1HMdf9xx4/LijqUC/kITQIg9wBxnmcjVbDjd0xLJIz0VGkNHQmtamm7R+LYSxWxZuOYL5uyVSgBS1hrnFKIOGNnSraM6C0FR0zQt0T/s+cDf9fu+Oh1ub/fHa7t7P9/28P9/v83k+D7qu818C3A6UAV8AFfJ1GUUIFyAKeC/Wbh/OK1g58MAy97fAenmdjCJMFSASSAKasnMX/rFpe5ueU7Jbn5W7qg14UV4vowhTBfgQOLM0f/nZoq1NRrjg1oy8T4Hn5fUyijAVgA13JCUP5Rc8Pli7r9MfLpiemnsIWCN7ZBTBLMAyW1TU+Yamz8eO9PykL3xhzw0F2OIS24FM2SejCGYA5mqadmFHw27voxsO6A+V79XvXVF50hfuKq4/AwwAFtkrowhmAJorNr526dW6DiMw48ma/uQH1/T6CpiZtkgc/5uyLxCKMBlAjt3hON9ypHf8uJ/bdcXmSOxyFddfE//Tl1d2A3+ZOX7jfrIQCiAd2FxaXjFS8m7LeLOlLGiJn7v4e9/u5zz2cjcW7TdgiewPhCKEAjgA/F3X0DhqHP1TNSewWEbmu+u8vgLuK3jjO+BnM8/fuKcsBAOIs1qtlwuLVp9ubP7KCItNSG2Nu9Pp370gesasw8AW2R8MRQgGUOzMcg0d6vxB93x8VM9y1/0CXHI+UX3BF57lrhM7HxGTUfYHQxGCAXz9VlX1lcItB42wW5KzmqNnJPk7f7wf7hfd3yZ7Q6EIgRA70jTN29XbZwRlr20YBs7ek7/5d1949rP1w2AR73+e7A+FIgQCKMp05fy5r+OYEZbyyLp2i2Y9l1Oy67rdLxC7b5W9k6EIgRBDxb229OLWnb7mS2mJTUzr8T/71R+IfhgEUmXvZChCIID6t7fVeNd72kXgKBbLr3ctesY/emPiZ4tPb6XsM4MiyABOoKqq1uMtrz2sp694vQu4Nt+946oIn1f4Tg/wD+CRvWZQBBnxTgNjL72y6fLG9zv0hPQln1m0iHO+3ac8XHbUOi1GDJ9VstcMiiADlKbPcw7t/+Tg6Eet3Xr09KR2LTLqtK+AjJXVPwIngAjZawZFkAGSxSvYf7Jf7z5+SteskcciouJOTRQwFmGzfwOsk31mUYRAANtm3z1nsOd431Ux/WyOhL7Mpz0D0+wzO4HtZud+IBQhEIAV+DImNnYI0C2aVQyci+E23g33loVAALeJISPCr0PM/DR57VRRhGCIJgMaJ8LHgMXymnBQhFAArokC9svXwkURQjHxKMSPMvlauChCKP4PBcTf1AIMA+y82QU4gKWyHi7/AjsRTPKWYwn2AAAAAElFTkSuQmCC" InformativeScreenshot="4501ff3ae48844c9cf877134d6d5105c.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/J5VI5J3tyUqGJGHj26SzHw" Selector="&lt;wnd app='crm_desktop_app.exe' cls='TkTopLevel' title='The Automation Challenge | CRM App' /&gt;" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

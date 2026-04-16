@@ -140,7 +140,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="845.3333333333334,644" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="994.6666666666666,806.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[dt_CustomerData]" Name="dt_CustomerData" />
     </Sequence.Variables>
@@ -149,21 +149,32 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845.3333333333334,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting Main&quot;]" />
-    <ui:ReadRange AddHeaders="True" DataTable="[dt_CustomerData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="845.3333333333334,229.33333333333334" sap2010:WorkflowViewState.IdRef="ReadRange_2" PreserveFormat="True" SheetName="Sheet1" WorkbookPath="C:\Users\HP\Documents\UiPath Project Portfolio\Robot 2 Customer Onboarding Data Capturer\Customer_Data.xlsx">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="994.6666666666666,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting Main&quot;]" />
+    <ui:ReadRange AddHeaders="True" DataTable="[dt_CustomerData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="994.6666666666666,229.33333333333334" sap2010:WorkflowViewState.IdRef="ReadRange_2" PreserveFormat="True" SheetName="Sheet1" WorkbookPath="C:\Users\HP\Documents\UiPath Project Portfolio\Robot 2 Customer Onboarding Data Capturer\Customer_Data.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <Parallel sap:VirtualizedContainerService.HintSize="845.3333333333334,215.33333333333334" sap2010:WorkflowViewState.IdRef="Parallel_1">
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="WebDataCapturing - Invoke Workflow File (WebDataCapturing.xaml)" sap:VirtualizedContainerService.HintSize="377.3333333333333,145.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WebDataCapturing.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_CustomerData">[dt_CustomerData]</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DesktopDataCapturing - Invoke Workflow File (DesktopDataCapturing.xaml)" sap:VirtualizedContainerService.HintSize="374,145.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DesktopDataCapturing.xaml">
+    <Parallel sap:VirtualizedContainerService.HintSize="994.6666666666666,378" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="526.6666666666666,308" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="WebDataCapturing - Invoke Workflow File (WebDataCapturing.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WebDataCapturing.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_CustomerData">[dt_CustomerData]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DesktopDataCapturing - Invoke Workflow File (DesktopDataCapturing.xaml)" sap:VirtualizedContainerService.HintSize="374,308" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DesktopDataCapturing.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="In_CustomerData">[dt_CustomerData]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
