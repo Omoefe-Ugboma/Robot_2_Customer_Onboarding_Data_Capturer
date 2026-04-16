@@ -45,6 +45,7 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -105,41 +106,141 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WebDataCapturing" sap:VirtualizedContainerService.HintSize="722,931.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WebDataCapturing" sap:VirtualizedContainerService.HintSize="746.6666666666666,3742.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting Web Data Capturing&quot;]" />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="488,128" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Ensure you're signed into https://www.theautomationchallenge.com/crm and are not using an incognito browser" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome CRM" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,604" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="fe274566-5dc7-488a-b1d2-37d3c9e2f076" UserDataFolderMode="[UiPath.UIAutomationNext.Enums.BrowserUserDataFolderMode.DefaultFolder]" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting Web Data Capturing&quot;]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="524,128" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Ensure you're signed into https://www.theautomationchallenge.com/crm and are not using an incognito browser" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome CRM" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,3415.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="fe274566-5dc7-488a-b1d2-37d3c9e2f076" UserDataFolderMode="[UiPath.UIAutomationNext.Enums.BrowserUserDataFolderMode.DefaultFolder]" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,409.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,3220.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_CustomerData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,349.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_CustomerData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,3160.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,2986" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Processing: &quot;+CurrentRow(&quot;first name&quot;).ToString+ &quot; &quot;+CurrentRow(&quot;last name&quot;).ToString]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="452,124" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Processing: &quot;+CurrentRow(&quot;first name&quot;).ToString+ &quot; &quot;+CurrentRow(&quot;last name&quot;).ToString]" />
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;first name&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="IMedcEo6REO9kOM3iuiy2A" DesignTimeRectangle="144, 376, 300, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="5a476c0a-e421-4c4e-a780-a660647ebeb1" InformativeScreenshot="f55f83e05eea6fa2b73c41c14ff87442.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/xKvbAsWDz0eNYMgzDKuyVA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'Last'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;last name&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="0UySHchYBE2jrULZkiAz_g" DesignTimeRectangle="144, 439, 300, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tabindex='5' tag='INPUT' type='input' class='bubble-element Input a1776286186946x1551' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e205b77d-b89f-4e24-904e-769690e125f9" InformativeScreenshot="926fff2ce21f1549e2157c76d9a40f81.jpg" IsResponsive="True" Reference="wO9kpzPyiUqWrd2hfvwZVg/rTawT9QLbES_G17bMRv6WQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="63, 439, 81, 34" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Last:' class='content' tag='DIV' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Last:' /&gt;" Guid="37ba1848-880d-4510-9537-40657db2c525" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'INPUT(1)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;address&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="3ZrBp1EVYEyWdBhZSmPSfA" DesignTimeRectangle="677, 376, 250, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tabindex='7' tag='INPUT' type='input' /&gt;" Guid="472b9793-f4fb-48d7-9d2e-e379e4cb5688" InformativeScreenshot="38aca74261a24104866df9d489a6b9bf.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/TkQM9NIjbUuZsqzZqWz3GA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;city&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="5brygNkvdkmS4BmmWp7KTA" DesignTimeRectangle="677, 439, 250, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tabindex='8' tag='INPUT' type='input' class='bubble-element Input a1776286993535x1545' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="663e3799-0781-4718-9b0f-22e9b927464b" InformativeScreenshot="b0d1f9bb49a3903ed80d9fc92ad7f525.jpg" IsResponsive="True" Reference="wO9kpzPyiUqWrd2hfvwZVg/Q2X-vTrnaEaxD-UCkJ7RFQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="545, 439, 132, 34" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='City:' class='content' tag='DIV' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='City:' /&gt;" Guid="43180c01-58b7-47af-8764-b199389c51e6" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'Home'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;home phone&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="6mDFyxOikkmvn0bVxn3bJw" DesignTimeRectangle="1142, 381, 250, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tabindex='10' tag='INPUT' type='input' class='bubble-element Input a1776286993535x1545' aaname='' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="0353e3c7-7902-4526-beef-5508269e1bf6" InformativeScreenshot="5451f45ffc02cceeb0b420cde0f991e7.jpg" IsResponsive="True" Reference="wO9kpzPyiUqWrd2hfvwZVg/J04WIBh5OkKyoqpb78DY3Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1014, 381, 128, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Home:' class='content' tag='DIV' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Home:' /&gt;" Guid="80f22ac9-3e2f-4071-be29-4cfb6c9baa9a" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'INPUT(2)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;work phone&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="nJhcjTegxUqiO-GpBp7EQw" DesignTimeRectangle="1142, 444, 250, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tabindex='11' tag='INPUT' type='input' /&gt;" Guid="615225c0-dc7f-461d-b16f-6253f57eeb61" InformativeScreenshot="9d14192aff93a8b6bfa600363ee475eb.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/Beu_k6Vc70GtzZURotUTng" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'Personal'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;personal email&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="HxskmZJaSE6G2VhfLmcLdQ" DesignTimeRectangle="1613, 376, 251, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='bubble-element Input a1776286993535x1545' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d9e5cd1d-b4b8-47ac-93c3-bb289262bbf9" InformativeScreenshot="58064c69b4ef3619bc149bbbea45d6e4.jpg" IsResponsive="True" Reference="wO9kpzPyiUqWrd2hfvwZVg/Ib2-LH1UgEaDTEIn50dFhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1484, 379, 129, 34" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Personal:' class='content' tag='DIV' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Personal:' /&gt;" Guid="65f68cee-fa2c-4bb6-86ff-8d29d3bb781d" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" ClipboardMode="Never" DisplayName="Type Into 'INPUT(3)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,248" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="Simulate" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Text="[CurrentRow(&quot;work email&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="xdrzmYpuEE-7TEiqFxB4CQ" DesignTimeRectangle="1613, 439, 251, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tabindex='13' tag='INPUT' type='email' /&gt;" Guid="b742685b-f928-49a4-84c8-e9edd09e0097" InformativeScreenshot="f59aabafd463874f1c1da2ed327a57a5.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/BaR-NneEF0SQW8HeNZvrMQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <If Condition="[CurrentRow(&quot;gender&quot;).ToString=&quot;Male&quot;]" sap:VirtualizedContainerService.HintSize="452,632" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'unchecked'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="lrvYxrDbO0aIpjv7Cecrwg" DesignTimeRectangle="225, 516, 156, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" Guid="45d0af5c-1e3e-4931-8bf4-7f7f833e51cb" InformativeScreenshot="8bd1b05e88942944783827698d264860.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/n9TJ-965W06hhNF9qDLAOA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'unchecked(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="wZJAm82P2ke3VIoHNZctxA" DesignTimeRectangle="225, 555, 156, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Female' tag='LABEL' /&gt;" Guid="a1c6cea5-f891-4e3d-8d97-91f6b5dc4ed9" InformativeScreenshot="40d15cf396c0c25f10396309b766bfc0.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/EZjGDbwmSEuOqhe4IMvk3w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'Add'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe274566-5dc7-488a-b1d2-37d3c9e2f076" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="theautomationchallenge.com/crm" ContentHash="OK9nE5RgXEyuQtHERSDk5g" DesignTimeRectangle="86, 627, 138, 42" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Add' tag='BUTTON' /&gt;" Guid="26768906-1af2-424d-a2cc-0aca8d4657db" InformativeScreenshot="73f3a957ee4451d3e82550c9111aa085.jpg" Reference="wO9kpzPyiUqWrd2hfvwZVg/QBnHfbk5jE2B6aTgJQXmFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CRM' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>

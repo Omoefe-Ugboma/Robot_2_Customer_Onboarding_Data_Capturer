@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Add",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "QBnHfbk5jE2B6aTgJQXmFA",
+  "Reference": "wO9kpzPyiUqWrd2hfvwZVg/QBnHfbk5jE2B6aTgJQXmFA",
+  "ParentRef": "wO9kpzPyiUqWrd2hfvwZVg/rGUCz4lXQkeO6D60Xtb-vQ",
+  "Created": "2026-04-15T20:53:07.8130051Z",
+  "Updated": "2026-04-15T20:53:07.8130051Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
