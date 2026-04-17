@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Delaware",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "QeEWS4xBY06BI6lhT4r8Ug",
+  "Reference": "wO9kpzPyiUqWrd2hfvwZVg/QeEWS4xBY06BI6lhT4r8Ug",
+  "ParentRef": "wO9kpzPyiUqWrd2hfvwZVg/J5VI5J3tyUqGJGHj26SzHw",
+  "Created": "2026-04-17T13:41:32.2792579Z",
+  "Updated": "2026-04-17T13:41:32.2792579Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
