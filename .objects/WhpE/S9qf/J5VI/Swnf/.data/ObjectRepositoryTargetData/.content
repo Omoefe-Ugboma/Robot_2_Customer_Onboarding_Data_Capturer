@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="4dtrR_GFn0qth3x1DRqIbg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="CUjkNdfKD02O3kMtryQMoQ" Reference="wO9kpzPyiUqWrd2hfvwZVg/SwnfzG1NPkanPtsPZnMEOg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1215, 417, 140, 44" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TkChild' idx='12' /&gt;" Guid="020820ef-c87b-4a25-85d8-a6e0eebe0d05" ScopeSelectorArgument="&lt;wnd app='crm_desktop_app.exe' cls='TkTopLevel' title='The Automation Challenge | CRM App' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
-      <imageRef attrName="InformativeScreenshot" originalValue="39e1aab5349eea5f2e99dbb9b2578d90.jpg" xmlns="">0Kjpc-EBAgUqg-j6JdxMB_w</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" CvTextArgument="Refresh Table" CvType="Button" DesignTimeRectangle="1215, 417, 140, 44" ElementVisibilityArgument="Visible" FullSelectorArgument="&lt;wnd cls='TkChild' idx='12' /&gt;" Guid="020820ef-c87b-4a25-85d8-a6e0eebe0d05" ScopeSelectorArgument="&lt;wnd app='crm_desktop_app.exe' cls='TkTopLevel' title='The Automation Challenge | CRM App' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="39e1aab5349eea5f2e99dbb9b2578d90.jpg" xmlns="">0aVkcVn5dtE2pCALUKoQ_Zw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>
